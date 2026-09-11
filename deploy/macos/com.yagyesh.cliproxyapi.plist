@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.yagyesh.cliproxyapi</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>__HOME__/Developer/CLIProxyAPI/bin/cli-proxy-api</string>
+        <string>--config</string>
+        <string>__HOME__/Developer/CLIProxyAPI/config.yaml</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>__HOME__/Developer/CLIProxyAPI</string>
+
+    <!-- start at login -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- restart if it ever exits -->
+    <key>KeepAlive</key>
+    <true/>
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+
+    <key>ProcessType</key>
+    <string>Background</string>
+
+    <key>StandardOutPath</key>
+    <string>__HOME__/Library/Logs/cliproxyapi.log</string>
+    <key>StandardErrorPath</key>
+    <string>__HOME__/Library/Logs/cliproxyapi.log</string>
+</dict>
+</plist>
